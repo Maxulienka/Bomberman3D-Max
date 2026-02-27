@@ -3,7 +3,9 @@ Project: Bomberman3D<br />
 Engine: Unreal Engine 5 (Hybrid C++ / Blueprints)<br />
 Team: Maximilián Repa (Game Design, 3D Art, Sound), Michal Flaška (Programming), Eduard Fabo (3D Art, 2D Art)<br />
 Target Platform: PC (Windows)<br />
-Last Updated: `2026-02-26 5:22PM`
+Last Updated: `2026-02-26 7:02PM`
+
+Made fully by me, grammar fixed with AI.
 
 <br><br>
 
@@ -308,6 +310,7 @@ Source/
 │   ├── GameMode/
 │   ├── SaveGame/
 │   └── UI/
+└── ...
 ```
 
 <br><br>
