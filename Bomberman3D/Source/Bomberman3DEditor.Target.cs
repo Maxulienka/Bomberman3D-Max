@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 public class Bomberman3DEditorTarget : TargetRules
 {
-	public Bomberman3DEditorTarget(TargetInfo Target) : base(Target)
+	public Bomberman3DEditorTarget( TargetInfo Target) : base(Target)
 	{
 		Type = TargetType.Editor;
 		DefaultBuildSettings = BuildSettingsVersion.V5;
