@@ -62,7 +62,10 @@ public:
 	ETileContent GetTileContent(int32 X, int32 Y) const;
 
 	UFUNCTION(BlueprintCallable)
-	void SetTileContent(int32 X, int32 Y, ETileContent) const;
+	void SetTileContent(int32 X, int32 Y, ETileContent NewContent);
+
+	UFUNCTION(BlueprintCallable)
+	bool IsTileSoft(int32 X, int32 Y) const;
 
 private:
 	TArray<TArray<ETileContent>> Data;

@@ -95,7 +95,7 @@ ETileContent ABombermanGrid::GetTileContent(int32 X, int32 Y) const {
 	}
 }
 
-void ABombermanGrid::SetTileContent(int32 X, int32 Y, ETileContent WhatToSet) const {
+void ABombermanGrid::SetTileContent(int32 X, int32 Y, ETileContent NewContent) {
 	if (X >= BaseGridWidth || Y >= BaseGridHeight ||
 		X < 0 || Y < 0
 		)
@@ -103,6 +103,23 @@ void ABombermanGrid::SetTileContent(int32 X, int32 Y, ETileContent WhatToSet) co
 		return;
 	}
 	else {
-		Data[X][Y] = WhatToSet; // FINISH THIS
+		Data[X][Y] = NewContent;
+	}
+}
+
+bool ABombermanGrid::IsTileSoft(int32 X, int32 Y) const {
+	if (X >= BaseGridWidth || Y >= BaseGridHeight ||
+		X < 0 || Y < 0
+		)
+	{
+		return false;
+	}
+	else {
+		if (Data[X][Y] == ETileContent::SoftBlock) {
+			return true;
+		}
+		else {
+			return false;
+		}
 	}
 }
