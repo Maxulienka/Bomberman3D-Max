@@ -6,6 +6,8 @@
 #include "EnhancedInputComponent.h"
 #include "EnhancedInputSubsystems.h"
 
+#include "GameFramework/CharacterMovementComponent.h" // GetCharacterMovement()
+
 // Sets default values
 ABombermanCharacter::ABombermanCharacter()
 {
@@ -21,6 +23,9 @@ ABombermanCharacter::ABombermanCharacter()
 
 	Camera = CreateDefaultSubobject<UCameraComponent>(TEXT("Camera"));
 	Camera->SetupAttachment(SpringArm);
+
+	GetCharacterMovement()->bOrientRotationToMovement = true;
+	bUseControllerRotationYaw = false;
 }
 
 // Called when the game starts or when spawned
