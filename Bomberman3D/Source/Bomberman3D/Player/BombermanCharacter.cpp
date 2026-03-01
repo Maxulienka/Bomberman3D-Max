@@ -5,6 +5,7 @@
 
 #include "EnhancedInputComponent.h"
 #include "EnhancedInputSubsystems.h"
+#include "Grid/BombermanGrid.h"
 
 #include "GameFramework/CharacterMovementComponent.h" // GetCharacterMovement()
 
@@ -60,4 +61,17 @@ void ABombermanCharacter::Move(const FInputActionValue& Value)
 	FVector2D Input = Value.Get<FVector2D>();
 	AddMovementInput(FVector::ForwardVector, Input.Y);
 	AddMovementInput(FVector::RightVector, Input.X);
+}
+
+FVector2D ABombermanCharacter::GetCurrentGridPosition() const
+{
+	if (Grid) // null check
+	{
+		return FVector2D(
+			FMath::RoundToInt(GetActorLocation().X / Grid->GetTileSize()),
+			FMath::RoundToInt(GetActorLocation().Y / Grid->GetTileSize())
+		);
+	}
+
+	return FVector2D::ZeroVector; // in case the compiler will talk shit
 }

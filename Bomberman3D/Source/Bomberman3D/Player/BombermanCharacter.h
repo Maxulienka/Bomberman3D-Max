@@ -14,6 +14,8 @@
 
 #include "BombermanCharacter.generated.h"
 
+class ABombermanGrid;
+
 UCLASS()
 class BOMBERMAN3D_API ABombermanCharacter : public ACharacter
 {
@@ -50,4 +52,11 @@ public:
 
 	UPROPERTY(VisibleAnywhere, Category = "Camera")
 	UCameraComponent* Camera;
+
+	// --- misc ---
+
+	UPROPERTY(EditAnywhere, Category = "Grid")
+	ABombermanGrid* Grid;
+
+	FVector2D GetCurrentGridPosition() const;
 };

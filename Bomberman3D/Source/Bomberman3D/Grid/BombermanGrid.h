@@ -67,6 +67,9 @@ public:
 	UFUNCTION(BlueprintCallable)
 	bool IsTileSoft(int32 X, int32 Y) const;
 
+public:
+	float GetTileSize() const { return TileSize; }
+
 private:
 	TArray<TArray<ETileContent>> Data;
 };

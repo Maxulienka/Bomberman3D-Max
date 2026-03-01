@@ -22,7 +22,7 @@ AI enhanced TODO
 - [x] Top-down movement (4-directional, smooth)
 - [x] Fixed camera setup (spring arm, locked rotation, -65 degrees)
 - [ ] Bomb placement input
-- [ ] GetCurrentGridPosition() (world pos -> grid coords)
+- [x] GetCurrentGridPosition() (world pos -> grid coords)
 - [ ] BombermanPlayerState (lives, score, upgrades struct, bomb count, blast radius)
 - [ ] FPlayerUpgrades struct
 
