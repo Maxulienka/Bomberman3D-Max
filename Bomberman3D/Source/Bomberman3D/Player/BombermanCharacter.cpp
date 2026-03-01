@@ -53,6 +53,7 @@ void ABombermanCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInput
 	if (UEnhancedInputComponent* EnhancedInput = Cast<UEnhancedInputComponent>(PlayerInputComponent))
 	{
 		EnhancedInput->BindAction(MoveAction, ETriggerEvent::Triggered, this, &ABombermanCharacter::Move);
+		EnhancedInput->BindAction(PlaceBombAction, ETriggerEvent::Started, this, &ABombermanCharacter::PlaceBomb);
 	}
 }
 
@@ -61,6 +62,10 @@ void ABombermanCharacter::Move(const FInputActionValue& Value)
 	FVector2D Input = Value.Get<FVector2D>();
 	AddMovementInput(FVector::ForwardVector, Input.Y);
 	AddMovementInput(FVector::RightVector, Input.X);
+}
+
+void ABombermanCharacter::PlaceBomb(const FInputActionValue& Value) {
+	UE_LOG(LogTemp, Warning, TEXT("Bomb Placed"));
 }
 
 FVector2D ABombermanCharacter::GetCurrentGridPosition() const

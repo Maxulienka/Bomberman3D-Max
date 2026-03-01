@@ -41,9 +41,13 @@ public:
 	UPROPERTY(EditDefaultsOnly, Category = "Input")
 	UInputAction* MoveAction;
 
+	UPROPERTY(EditDefaultsOnly, Category = "Input")
+	UInputAction* PlaceBombAction;
+
 	// --- input refs ---
 
 	void Move(const FInputActionValue& Value);
+	void PlaceBomb(const FInputActionValue& Value);
 
 	// --- camera ---
 

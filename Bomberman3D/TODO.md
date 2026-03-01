@@ -21,7 +21,7 @@ AI enhanced TODO
 - [x] BombermanCharacter class (inherits ACharacter)
 - [x] Top-down movement (4-directional, smooth)
 - [x] Fixed camera setup (spring arm, locked rotation, -65 degrees)
-- [ ] Bomb placement input
+- [x] Bomb placement input
 - [x] GetCurrentGridPosition() (world pos -> grid coords)
 - [x] BombermanPlayerState (lives, score, upgrades struct, bomb count, blast radius)
 - [x] FPlayerUpgrades struct
