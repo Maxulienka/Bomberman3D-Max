@@ -15,7 +15,8 @@ public class Bomberman3D : ModuleRules
         PublicIncludePaths.AddRange(new string[] {
             "Bomberman3D",
             "Bomberman3D/Grid",
-            "Bomberman3D/Player"
+            "Bomberman3D/Player",
+            "Bomberman3D/Bomb"
         });
 
         // Uncomment if you are using Slate UI

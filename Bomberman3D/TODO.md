@@ -27,9 +27,9 @@ AI enhanced TODO
 - [x] FPlayerUpgrades struct
 
 ### Bomb
-- [ ] ABomb actor class
-- [ ] Bomb states: Placed -> Armed -> Detonating -> Explosion -> Cleanup
-- [ ] Fuse timer
+- [x] ABomb actor class
+- [x] Bomb states: Placed -> Armed -> Detonating -> Explosion -> Cleanup
+- [x] Fuse timer
 - [ ] Explosion logic (cross-shaped, 4 directions, stops on hard/soft walls)
 - [ ] Soft block destruction on explosion
 - [ ] Chain reaction (bomb hit by explosion detonates immediately)
