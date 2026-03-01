@@ -18,6 +18,8 @@ ABombermanCharacter::ABombermanCharacter()
 	SpringArm->SetupAttachment(RootComponent);
 	SpringArm->bUsePawnControlRotation = false; // bomberman has a fixed camera
 	SpringArm->TargetArmLength = 400.f;
+	SpringArm->bInheritYaw = false; // fixing the rotation bug
+	GetCharacterMovement()->bOrientRotationToMovement = true; // fixing the rotation bug
 	SpringArm->bDoCollisionTest = false; // TDD says no collision
 	SpringArm->SetRelativeRotation(FRotator(-65.f, 0.f, 0.f));
 
@@ -53,8 +55,9 @@ void ABombermanCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInput
 	}
 }
 
-void ABombermanCharacter::Move(const FInputActionValue& Value) {
+void ABombermanCharacter::Move(const FInputActionValue& Value)
+{
 	FVector2D Input = Value.Get<FVector2D>();
-	AddMovementInput(GetActorForwardVector(), Input.Y);
-	AddMovementInput(GetActorRightVector(), Input.X);
+	AddMovementInput(FVector::ForwardVector, Input.Y);
+	AddMovementInput(FVector::RightVector, Input.X);
 }
