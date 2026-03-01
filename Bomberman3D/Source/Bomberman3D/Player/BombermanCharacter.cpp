@@ -70,7 +70,7 @@ void ABombermanCharacter::PlaceBomb(const FInputActionValue& Value) {
 
 FVector2D ABombermanCharacter::GetCurrentGridPosition() const
 {
-	if (Grid) // null check
+	if (Grid) // meow meow null check
 	{
 		return FVector2D(
 			FMath::RoundToInt(GetActorLocation().X / Grid->GetTileSize()),
